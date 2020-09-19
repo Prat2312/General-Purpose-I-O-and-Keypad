@@ -1,0 +1,9 @@
+--cpu=Cortex-M4.fp --branchpatch=sdcomp-29491-629360
+".\objects\start_assembly.o"
+".\objects\exp_1_assembly.o"
+".\objects\startup_stm32l4r5xx.o"
+".\objects\system_stm32l4xx.o"
+--strict --scatter ".\Objects\Exp1_Example.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\Exp1_Example.map" -o .\Objects\Exp1_Example.axf
